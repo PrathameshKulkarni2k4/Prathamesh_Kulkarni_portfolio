@@ -25,21 +25,25 @@ export const proof = [
 ];
 
 export const techStack = [
+  "Java",
   "TypeScript",
+  "JavaScript",
+  "Python",
+  "C++",
   "React",
+  "Angular",
   "Next.js",
   "Node.js",
   "Express",
+  ".NET",
+  "Flutter",
+  ".NET MAUI",
   "MongoDB",
-  "Socket.IO",
+  "MySQL",
+  "MSSQL",
+  "Oracle",
   "Tailwind CSS",
-  "Java",
-  "C++",
-  "Python",
-  "PostgreSQL",
   "REST APIs",
-  "JWT",
-  "Docker",
   "Git",
 ];
 
@@ -146,7 +150,7 @@ export const projects: Project[] = [
       "Containerised training and serving workflows",
       "Focus on production-grade ML engineering",
     ],
-    stack: ["Python", "Docker", "Make", "MLOps"],
+    stack: ["Python", "Make", "MLOps"],
     repo: "https://github.com/PrathameshKulkarni2k4/mlops-production-hub",
   },
 ];
@@ -156,30 +160,45 @@ export type SkillGroup = { title: string; items: string[] };
 export const skillGroups: SkillGroup[] = [
   {
     title: "Languages",
-    items: ["Java", "C++", "C", "Python", "JavaScript", "TypeScript", "SQL"],
+    items: [
+      "Java",
+      "C++",
+      "C",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "SQL",
+    ],
   },
   {
     title: "Frontend",
     items: [
       "React",
+      "Angular",
       "Next.js",
       "Tailwind CSS",
       "HTML/CSS",
       "Bootstrap",
-      "Figma",
     ],
   },
   {
-    title: "Backend & data",
+    title: "Backend",
     items: [
       "Node.js",
       "Express",
-      "MongoDB",
-      "PostgreSQL",
+      ".NET",
       "REST APIs",
-      "JWT",
+      "JWT Auth",
       "Socket.IO",
     ],
+  },
+  {
+    title: "Databases",
+    items: ["MongoDB", "MySQL", "MSSQL", "Oracle", "Cloudinary"],
+  },
+  {
+    title: "Mobile",
+    items: ["Flutter", ".NET MAUI", "Android"],
   },
   {
     title: "Fundamentals & AI",

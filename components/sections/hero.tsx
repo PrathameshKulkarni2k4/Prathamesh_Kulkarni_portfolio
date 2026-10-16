@@ -5,6 +5,7 @@ import { ArrowDown, ArrowUpRight, Mail } from "lucide-react";
 import { Marquee } from "@/components/ui/marquee";
 import { Magnetic } from "@/components/ui/magnetic";
 import { profile, proof, techStack } from "@/lib/data";
+import { avatar } from "@/lib/avatar";
 
 const ease: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -32,6 +33,13 @@ export const Hero = () => {
           transition={{ duration: 0.6, ease }}
           className="mb-8 flex items-center gap-3"
         >
+          <img
+            src={avatar}
+            alt="Prathamesh Kulkarni"
+            width={44}
+            height={44}
+            className="h-11 w-11 rounded-full border border-line object-cover"
+          />
           <span className="flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1.5">
             <span className="relative flex h-1.5 w-1.5">
               <span className="absolute inline-flex h-full w-full animate-pulse-dot rounded-full bg-accent" />

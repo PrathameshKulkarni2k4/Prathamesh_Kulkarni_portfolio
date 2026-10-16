@@ -4,13 +4,17 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Prathamesh Kulkarni — Full-Stack & AI Engineer",
   description:
-    "Prathamesh Kulkarni — B.Tech CSE '26, GATE 2025 qualified. Full-stack engineer building MERN products and applied AI systems. Open to SDE roles.",
+    "Prathamesh Kulkarni — B.Tech CSE '26, GATE 2025 qualified. Full-stack engineer across React, Angular, Node.js and .NET, with Flutter mobile and applied AI work. Open to SDE roles.",
   keywords: [
     "Prathamesh Kulkarni",
     "Full Stack Engineer",
     "MERN Developer",
+    "Angular Developer",
+    ".NET Developer",
+    "Flutter Developer",
     "Next.js Developer",
     "AI Engineer",
+    "Java Developer",
     "SDE",
     "DKTE",
     "Portfolio",

@@ -57,7 +57,9 @@ Everything editable is in **`lib/data.ts`** — profile, proof points, projects,
 
 ## Deploy
 
-Push to GitHub and import on [Vercel](https://vercel.com). `vercel.json` pins the framework to Next.js so it deploys without configuration.
+The site builds to a fully static `out/` directory (`output: "export"` in `next.config.mjs`), so it can be hosted anywhere — Vercel, Netlify, GitHub Pages, S3.
+
+Push to GitHub and import on [Vercel](https://vercel.com). `vercel.json` sets `outputDirectory: "out"`, which means the deploy works as a plain static site and does **not** depend on the project's framework preset being set to Next.js. Functions (if ever added) run in Mumbai (`bom1`).
 
 ---
 
