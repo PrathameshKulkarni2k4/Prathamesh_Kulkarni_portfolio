@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Prathamesh Kulkarni — Full-Stack & AI Engineer",
   description:
-    "Prathamesh Kulkarni — Trainee Software Developer at Xperate, Pune. B.Tech CSE '26, GATE 2025 qualified. Full-stack across React, Angular, Node.js and .NET, with Flutter mobile and applied AI work.",
+    "Prathamesh Kulkarni — Software Developer at Xperate, Pune. B.Tech CSE '26, GATE 2025 qualified. Full-stack across React, Angular, Node.js and .NET, with Flutter mobile and applied AI work.",
   keywords: [
     "Prathamesh Kulkarni",
     "Full Stack Engineer",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Prathamesh Kulkarni — Full-Stack & AI Engineer",
     description:
-      "Trainee Software Developer at Xperate, Pune. Full-stack across React, Angular, Node.js and .NET, with Flutter mobile and applied AI work.",
+      "Software Developer at Xperate, Pune. Full-stack across React, Angular, Node.js and .NET, with Flutter mobile and applied AI work.",
     type: "website",
   },
 };

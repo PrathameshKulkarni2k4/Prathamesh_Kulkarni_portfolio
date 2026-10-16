@@ -4,8 +4,8 @@ export const profile = {
   pitch:
     "I build full-stack products with the MERN stack — and wire in machine learning where it actually earns its place.",
   intro:
-    "Full-stack developer at Xperate in Pune, building bespoke software for law firms and SME businesses. B.Tech in Computer Science from DKTE Society's Textile & Engineering Institute, GATE 2025 qualified. I care about systems that ship: clean APIs, real-time data, and interfaces people can actually use.",
-  currentRole: "Trainee Software Developer",
+    "Software Developer at Xperate in Pune, building bespoke software for law firms and SME businesses. B.Tech in Computer Science from DKTE Society's Textile & Engineering Institute, GATE 2025 qualified. I care about systems that ship: clean APIs, real-time data, and interfaces people can actually use.",
+  currentRole: "Software Developer",
   currentCompany: "Xperate",
   currentCompanyUrl: "https://www.linkedin.com/company/xperate",
   location: "Pune, Maharashtra, India",
@@ -226,13 +226,22 @@ export type TimelineItem = {
 
 export const timeline: TimelineItem[] = [
   {
-    title: "Trainee Software Developer",
+    title: "Software Developer",
     org: "Xperate · Pune, India",
-    period: "Dec 2025 — Present",
+    period: "Apr 2026 — Present",
     detail:
       "Building bespoke software for law firms, vendors and SME businesses at an international product and services company (UK HQ, teams across India, UK, Canada and Australia).",
     kind: "work",
     label: "Current role",
+  },
+  {
+    title: "Trainee Software Developer",
+    org: "Xperate · Pune, India",
+    period: "Dec 2025 — Apr 2026",
+    detail:
+      "Joined the engineering team while finishing my degree, and was promoted to Software Developer within four months.",
+    kind: "work",
+    label: "Promoted",
   },
   {
     title: "Salesforce Developer Intern",
