@@ -5,13 +5,16 @@ import { Reveal } from "@/components/ui/reveal";
 import { beyond, profile } from "@/lib/data";
 
 const facts = [
+  {
+    k: "Currently",
+    v: `${profile.currentRole} at ${profile.currentCompany}`,
+  },
   { k: "Based in", v: profile.location },
   {
     k: "Education",
     v: "B.Tech CSE, DKTE Society's Textile & Engineering Institute (2022 — 2026)",
   },
   { k: "Focus", v: "Full-stack engineering, applied ML & Generative AI" },
-  { k: "Status", v: "Final year · available for 2026 roles" },
 ];
 
 export const About = () => {

@@ -4,9 +4,11 @@ export const profile = {
   pitch:
     "I build full-stack products with the MERN stack — and wire in machine learning where it actually earns its place.",
   intro:
-    "Final-year B.Tech Computer Science student at DKTE Society's Textile & Engineering Institute. I care about systems that ship: clean APIs, real-time data, and interfaces people can actually use.",
-  availability: "Open to SDE roles · 2026 graduate",
-  location: "Ichalkaranji, Maharashtra, India",
+    "Full-stack developer at Xperate in Pune, building bespoke software for law firms and SME businesses. B.Tech in Computer Science from DKTE Society's Textile & Engineering Institute, GATE 2025 qualified. I care about systems that ship: clean APIs, real-time data, and interfaces people can actually use.",
+  currentRole: "Trainee Software Developer",
+  currentCompany: "Xperate",
+  currentCompanyUrl: "https://www.linkedin.com/company/xperate",
+  location: "Pune, Maharashtra, India",
   email: "prathameshkulkarni22092004@gmail.com",
   phone: "+91 93228 12459",
   github: "https://github.com/PrathameshKulkarni2k4",
@@ -219,9 +221,19 @@ export type TimelineItem = {
   period: string;
   detail: string;
   kind: "work" | "education";
+  label?: string;
 };
 
 export const timeline: TimelineItem[] = [
+  {
+    title: "Trainee Software Developer",
+    org: "Xperate · Pune, India",
+    period: "Dec 2025 — Present",
+    detail:
+      "Building bespoke software for law firms, vendors and SME businesses at an international product and services company (UK HQ, teams across India, UK, Canada and Australia).",
+    kind: "work",
+    label: "Current role",
+  },
   {
     title: "Salesforce Developer Intern",
     org: "SmartInternz · Virtual",
@@ -262,6 +274,7 @@ export const timeline: TimelineItem[] = [
 ];
 
 export const beyond = [
+  "AWS Academy Cloud Foundations (2025)",
   "200+ problems solved on LeetCode",
   "Cisco Networking Essentials certified",
   "Smart India Hackathon participant",

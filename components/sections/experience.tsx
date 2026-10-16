@@ -26,7 +26,7 @@ export const Experience = () => {
                 </div>
                 <div className="md:col-span-6">
                   <span className="font-mono text-[10px] uppercase tracking-wider text-faint">
-                    {t.kind === "work" ? "Internship" : "Education"}
+                    {t.label ?? (t.kind === "work" ? "Internship" : "Education")}
                   </span>
                   <h3 className="mt-1.5 text-base font-medium text-[#ededed]">
                     {t.title}

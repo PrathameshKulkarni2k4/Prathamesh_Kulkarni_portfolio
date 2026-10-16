@@ -14,10 +14,10 @@ The reasoning: a hiring manager skims a portfolio for under a minute. Loud gradi
 
 | Section | What it does |
 | --- | --- |
-| Hero | Name, role, availability, one-line pitch, resume CTA, and four scannable proof points |
+| Hero | Name, current role and company, one-line pitch, resume CTA, and four scannable proof points |
 | Work | Project list — title, category, outcome bullets, stack and live/code links, all visible without clicking |
 | About | Positioning paragraph plus a facts table and "beyond the code" list |
-| Stack | Four grouped columns of tools |
+| Stack | Six grouped columns of tools |
 | Experience | Internships and education as a clean two-column list |
 | Contact | Email, phone, location and social links |
 

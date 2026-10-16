@@ -31,9 +31,11 @@ export const Contact = () => {
                 .
               </h2>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">
-                I&apos;m looking for an SDE or full-stack role where I can own
-                real parts of a product. If that sounds like a fit, the fastest
-                way to reach me is email — I reply to everything.
+                I&apos;m currently building software at {profile.currentCompany}
+                {" "}
+                in Pune. If you want to talk about a project, a collaboration, or
+                something you think I&apos;d be a good fit for, email is the
+                fastest way to reach me — I reply to everything.
               </p>
             </Reveal>
 

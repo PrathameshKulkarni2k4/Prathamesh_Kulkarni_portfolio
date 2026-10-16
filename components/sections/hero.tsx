@@ -26,7 +26,7 @@ export const Hero = () => {
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-6 pb-16 pt-20">
-        {/* availability */}
+        {/* current role */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ export const Hero = () => {
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
             </span>
             <span className="font-mono text-[11px] uppercase tracking-wider text-muted">
-              {profile.availability}
+              {profile.currentRole} at {profile.currentCompany}
             </span>
           </span>
         </motion.div>
