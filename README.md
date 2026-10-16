@@ -1,31 +1,27 @@
 # Prathamesh Kulkarni — Portfolio
 
-A premium, animated personal portfolio for **Prathamesh Kulkarni** — B.Tech CSE '26, GATE 2025 qualified, Full-Stack (MERN) & AI developer.
+A refined, recruiter-focused personal portfolio for **Prathamesh Kulkarni** — B.Tech CSE '26, GATE 2025 qualified, Full-Stack & AI engineer.
 
-Built with **Next.js 14 (App Router)**, **Tailwind CSS** and **Framer Motion**, using hand-rolled **Aceternity UI**-style components (spotlight hero, meteors, bento grid, infinite marquee, spotlight cards, scroll-linked timeline, background beams and animated tooltips).
+Built with **Next.js 14 (App Router)**, **Tailwind CSS** and **Framer Motion**.
 
-## ✨ Features
+## Design direction
 
-- **Spotlight + Meteors hero** with an animated "profile.ts" code card
-- **Infinite tech-stack marquee** (pause on hover)
-- **Bento grid** for highlights and a **spotlight card** layout for skills
-- **Project cards** with per-project accent glow, stack badges and live/repo links
-- **Scroll-linked timeline** for experience & education
-- **Background beams** contact section with animated social tooltips
-- Sticky glass navbar with an animated active-section pill + mobile menu
-- Fully responsive, accessible (reduced-motion aware) and dark by default
+Deliberately restrained. A near-black monochrome base, a single electric-lime accent used sparingly, and typography doing the heavy lifting — Inter for the interface, Instrument Serif italic for emphasis, JetBrains Mono for labels and metadata. The motion is quiet: scroll reveals, a magnetic CTA, a cursor-trailing light and a film-grain overlay.
 
-## 🛠 Tech stack
+The reasoning: a hiring manager skims a portfolio for under a minute. Loud gradients and constant animation read as *template*; restraint, clarity and fast scanning read as *senior engineering taste*.
 
-| Layer      | Tech                                                    |
-| ---------- | ------------------------------------------------------- |
-| Framework  | Next.js 14 (App Router), React 18, TypeScript           |
-| Styling    | Tailwind CSS 3                                          |
-| Animation  | Framer Motion                                           |
-| Icons      | lucide-react                                            |
-| Utilities  | clsx + tailwind-merge (`cn`)                            |
+## Structure of the page
 
-## 🚀 Getting started
+| Section | What it does |
+| --- | --- |
+| Hero | Name, role, availability, one-line pitch, resume CTA, and four scannable proof points |
+| Work | Project list — title, category, outcome bullets, stack and live/code links, all visible without clicking |
+| About | Positioning paragraph plus a facts table and "beyond the code" list |
+| Stack | Four grouped columns of tools |
+| Experience | Internships and education as a clean two-column list |
+| Contact | Email, phone, location and social links |
+
+## Getting started
 
 ```bash
 npm install
@@ -35,34 +31,33 @@ npm run dev      # http://localhost:3000
 Production build:
 
 ```bash
-npm run build
-npm run start
+npm run build && npm run start
 ```
 
-## 📁 Structure
+## Structure
 
 ```
 app/
   layout.tsx        # metadata + fonts
   page.tsx          # section composition
-  globals.css       # theme, utilities, scrollbar
+  globals.css       # design tokens, utilities, grain, marquee
 components/
   navbar.tsx
   footer.tsx
-  sections/         # hero, about, skills, projects, experience, contact
-  ui/               # Aceternity-style primitives
+  sections/         # hero, work, about, stack, experience, contact
+  ui/               # reveal, magnetic, marquee, section-label, cursor-glow
 lib/
-  data.ts           # all content in one place
+  data.ts           # ALL content lives here
   utils.ts          # cn()
 ```
 
-## ✏️ Editing content
+## Editing content
 
-Almost everything lives in **`lib/data.ts`** — profile links, stats, skills, projects, timeline and highlights. Update that file and the whole site follows.
+Everything editable is in **`lib/data.ts`** — profile, proof points, projects, skills, timeline and nav. Change that one file and the whole site follows.
 
-## ☁️ Deploy
+## Deploy
 
-Push to GitHub and import the repo on [Vercel](https://vercel.com) — zero config, it detects Next.js automatically.
+Push to GitHub and import on [Vercel](https://vercel.com). `vercel.json` pins the framework to Next.js so it deploys without configuration.
 
 ---
 

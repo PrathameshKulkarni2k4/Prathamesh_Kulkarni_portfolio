@@ -1,89 +1,84 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
-import {
-  Trophy,
-  Award,
-  Network,
-  Briefcase,
-  GraduationCap,
-  Sparkles,
-} from "lucide-react";
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { SectionHeading } from "@/components/ui/section-heading";
-import { profile, highlights } from "@/lib/data";
+import { SectionLabel } from "@/components/ui/section-label";
+import { Reveal } from "@/components/ui/reveal";
+import { beyond, profile } from "@/lib/data";
 
-const icons = [Trophy, Network, Sparkles, Briefcase];
+const facts = [
+  { k: "Based in", v: profile.location },
+  {
+    k: "Education",
+    v: "B.Tech CSE, DKTE Society's Textile & Engineering Institute (2022 — 2026)",
+  },
+  { k: "Focus", v: "Full-stack engineering, applied ML & Generative AI" },
+  { k: "Status", v: "Final year · available for 2026 roles" },
+];
 
 export const About = () => {
   return (
     <section id="about" className="relative py-24 sm:py-32">
-      <div className="absolute inset-0 bg-dot opacity-[0.35]" />
-      <div className="relative mx-auto max-w-6xl px-5">
-        <SectionHeading
-          eyebrow="About me"
-          title={
-            <>
-              Engineering meets{" "}
-              <span className="gradient-text">intelligence</span>
-            </>
-          }
-          subtitle="A final-year CS student who likes building things that ship — and then making them smarter."
-        />
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-6">
+            <Reveal>
+              <SectionLabel index="02">About</SectionLabel>
+              <h2 className="mt-6 text-balance text-3xl font-semibold leading-tight tracking-[-0.02em] text-[#ededed] sm:text-4xl">
+                Strong fundamentals,{" "}
+                <span className="font-serif italic text-accent">
+                  shipped software
+                </span>
+                .
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-muted">
+                {profile.intro}
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-muted">
+                My foundation is data structures and algorithms in Java and C++,
+                which is what I lean on when a system gets complicated. From
+                there I build outward: typed APIs, real-time data, and interfaces
+                that don&apos;t get in the way. I&apos;m most useful on the parts
+                of a product that have to be correct, not just pretty.
+              </p>
+            </Reveal>
+          </div>
 
-        <div className="grid gap-10 lg:grid-cols-5">
-          <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5 }}
-            className="lg:col-span-2"
-          >
-            <p className="text-base leading-relaxed text-slate-400">
-              {profile.bio}
-            </p>
-
-            <div className="mt-8 flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-500 text-white">
-                <GraduationCap className="h-5 w-5" />
-              </span>
-              <div>
-                <div className="text-sm font-semibold text-slate-100">
-                  DKTE Society&apos;s Textile &amp; Engineering Institute
-                </div>
-                <div className="text-xs text-slate-500">
-                  B.Tech CSE · 2022 — 2026 · CGPA 8.74
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          <div className="lg:col-span-3">
-            <BentoGrid className="md:auto-rows-[13rem] md:grid-cols-2">
-              {highlights.map((h, i) => {
-                const Icon = icons[i % icons.length];
-                return (
-                  <motion.div
-                    key={h.title}
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-60px" }}
-                    transition={{ duration: 0.45, delay: i * 0.08 }}
+          <div className="lg:col-span-6">
+            <Reveal delay={0.1}>
+              <dl className="divide-y divide-line border-y border-line">
+                {facts.map((f) => (
+                  <div
+                    key={f.k}
+                    className="grid grid-cols-3 gap-6 py-4"
                   >
-                    <BentoGridItem
-                      title={h.title}
-                      description={h.body}
-                      icon={
-                        <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-indigo-400/25 bg-indigo-500/10 text-indigo-300">
-                          <Icon className="h-4 w-4" strokeWidth={2} />
-                        </span>
-                      }
-                      className="h-full"
-                    />
-                  </motion.div>
-                );
-              })}
-            </BentoGrid>
+                    <dt className="font-mono text-[11px] uppercase tracking-wider text-faint">
+                      {f.k}
+                    </dt>
+                    <dd className="col-span-2 text-sm leading-relaxed text-[#ededed]">
+                      {f.v}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </Reveal>
+
+            <Reveal delay={0.18}>
+              <div className="mt-8">
+                <p className="font-mono text-[11px] uppercase tracking-wider text-faint">
+                  Beyond the code
+                </p>
+                <ul className="mt-3 space-y-2">
+                  {beyond.map((b) => (
+                    <li
+                      key={b}
+                      className="flex items-center gap-3 text-sm text-muted"
+                    >
+                      <span className="h-1 w-1 rounded-full bg-accent" />
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
           </div>
         </div>
       </div>

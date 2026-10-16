@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #05050f;
-  --foreground: #e2e8f0;
+  --ink: #08090a;
+  --fg: #ededed;
 }
 
 * {
@@ -13,96 +13,130 @@
 
 html,
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: var(--ink);
+  color: var(--fg);
   overflow-x: hidden;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: rgba(99, 102, 241, 0.35);
-  color: #fff;
+  background: #bef264;
+  color: #08090a;
 }
 
-/* Custom scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 10px;
+  height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #05050f;
+  background: #08090a;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #6366f1, #06b6d4);
+  background: #23262a;
   border-radius: 9999px;
+  border: 3px solid #08090a;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #8b5cf6, #06b6d4);
+  background: #34383d;
 }
 
 @layer utilities {
-  .gradient-text {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(to right, #c084fc, #6366f1, #06b6d4);
+  /* Thin hairline separators */
+  .hairline {
+    border-color: rgba(255, 255, 255, 0.08);
   }
 
-  .glass {
-    background: rgba(21, 21, 37, 0.55);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+  .text-balance {
+    text-wrap: balance;
   }
 
-  /* Grid / dot backgrounds */
+  /* Subtle grid */
   .bg-grid {
     background-image: linear-gradient(
         to right,
-        rgba(255, 255, 255, 0.045) 1px,
+        rgba(255, 255, 255, 0.035) 1px,
         transparent 1px
       ),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-    background-size: 56px 56px;
+      linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.035) 1px,
+        transparent 1px
+      );
+    background-size: 64px 64px;
   }
 
-  .bg-dot {
+  .bg-dots {
     background-image: radial-gradient(
-      rgba(255, 255, 255, 0.12) 1px,
+      rgba(255, 255, 255, 0.09) 1px,
       transparent 1px
     );
-    background-size: 22px 22px;
+    background-size: 24px 24px;
+  }
+
+  /* Film grain */
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.16;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
   }
 
   .mask-fade-b {
-    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
   }
 
   .mask-fade-x {
     -webkit-mask-image: linear-gradient(
       to right,
       transparent,
-      black 12%,
-      black 88%,
+      #000 10%,
+      #000 90%,
       transparent
     );
     mask-image: linear-gradient(
       to right,
       transparent,
-      black 12%,
-      black 88%,
+      #000 10%,
+      #000 90%,
       transparent
     );
   }
 
-  .text-glow {
-    text-shadow: 0 0 32px rgba(99, 102, 241, 0.55);
+  /* Animated underline on hover for links */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .link-underline:hover {
+    background-size: 100% 1px;
+  }
+
+  .shimmer-text {
+    background: linear-gradient(
+      100deg,
+      #ededed 30%,
+      #ffffff 50%,
+      #ededed 70%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
-/* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

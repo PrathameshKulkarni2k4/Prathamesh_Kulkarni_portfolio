@@ -2,29 +2,30 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Prathamesh Kulkarni | Full-Stack Web & AI Developer",
+  title: "Prathamesh Kulkarni — Full-Stack & AI Engineer",
   description:
-    "Portfolio of Prathamesh Kulkarni — B.Tech CSE '26, GATE 2025 qualified. Building scalable MERN-stack applications and intelligent AI solutions.",
+    "Prathamesh Kulkarni — B.Tech CSE '26, GATE 2025 qualified. Full-stack engineer building MERN products and applied AI systems. Open to SDE roles.",
   keywords: [
     "Prathamesh Kulkarni",
-    "Full Stack Developer",
+    "Full Stack Engineer",
     "MERN Developer",
     "Next.js Developer",
-    "AI Developer",
+    "AI Engineer",
+    "SDE",
     "DKTE",
     "Portfolio",
   ],
   authors: [{ name: "Prathamesh Kulkarni" }],
   openGraph: {
-    title: "Prathamesh Kulkarni | Full-Stack Web & AI Developer",
+    title: "Prathamesh Kulkarni — Full-Stack & AI Engineer",
     description:
-      "Building scalable MERN-stack applications and intelligent AI solutions.",
+      "Full-stack engineer building MERN products and applied AI systems. Open to SDE roles.",
     type: "website",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#05050f",
+  themeColor: "#08090A",
   width: "device-width",
   initialScale: 1,
 };
@@ -44,11 +45,11 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="bg-[#05050f] font-sans text-slate-200 antialiased selection:bg-indigo-500/30">
+      <body className="bg-ink font-sans text-[#ededed] antialiased">
         {children}
       </body>
     </html>
