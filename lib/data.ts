@@ -14,8 +14,7 @@ export const profile = {
   github: "https://github.com/PrathameshKulkarni2k4",
   linkedin: "https://www.linkedin.com/in/prathameshkulkarni2k4/",
   leetcode: "https://leetcode.com/u/PrathameshKulkarni2k4/",
-  resume:
-    "https://drive.google.com/file/d/1_IAQkHuRXyggDjtJ275sxu2-NhqmYPvz/view",
+  resume: "/Prathamesh_Kulkarni_Resume.pdf",
 };
 
 /** Scannable proof points — the first thing a hiring manager should see. */
@@ -23,7 +22,7 @@ export const proof = [
   { value: "8.74", label: "CGPA" },
   { value: "2025", label: "GATE qualified" },
   { value: "200+", label: "LeetCode solved" },
-  { value: "6", label: "projects shipped" },
+  { value: "7", label: "projects shipped" },
 ];
 
 export const techStack = [
@@ -64,6 +63,21 @@ export type Project = {
 export const projects: Project[] = [
   {
     index: "01",
+    title: "flakeguard",
+    category: "Open source · developer tooling",
+    year: "2026",
+    summary:
+      "A CLI that finds the tests which randomly pass and fail, ranks them by how unreliable they are, and shows you why — so you can trust your test suite again.",
+    outcomes: [
+      "Reads JUnit XML, TAP and Jest JSON — one tool for any language",
+      "Explainable flakiness score plus failure-signature clustering",
+      "Ships a GitHub Actions workflow that comments on pull requests",
+    ],
+    stack: ["Python", "CLI", "GitHub Actions", "Open source"],
+    repo: "https://github.com/PrathameshKulkarni2k4/flakeguard",
+  },
+  {
+    index: "02",
     title: "TiffinSplit",
     category: "Full-stack web app",
     year: "2026",
@@ -79,7 +93,7 @@ export const projects: Project[] = [
     repo: "https://github.com/PrathameshKulkarni2k4/tiffinsplit",
   },
   {
-    index: "02",
+    index: "03",
     title: "RoomBuddy",
     category: "Real-time booking platform",
     year: "2025",
@@ -95,7 +109,7 @@ export const projects: Project[] = [
     repo: "https://github.com/PrathameshKulkarni2k4/room-booking-system",
   },
   {
-    index: "03",
+    index: "04",
     title: "Digipanchayat",
     category: "Applied AI · rural governance",
     year: "2025 — now",
@@ -111,7 +125,7 @@ export const projects: Project[] = [
     repo: "https://github.com/PrathameshKulkarni2k4/AIRGSS-megaproject",
   },
   {
-    index: "04",
+    index: "05",
     title: "Narratia",
     category: "AI collaborative writing",
     year: "2025",
@@ -126,7 +140,7 @@ export const projects: Project[] = [
     repo: "https://github.com/PrathameshKulkarni2k4/Narratia",
   },
   {
-    index: "05",
+    index: "06",
     title: "Movie Recommendation System",
     category: "Machine learning",
     year: "2024",
@@ -141,7 +155,7 @@ export const projects: Project[] = [
     repo: "https://github.com/PrathameshKulkarni2k4/Movie_recommadation",
   },
   {
-    index: "06",
+    index: "07",
     title: "MLOps Production Hub",
     category: "ML engineering",
     year: "2026",

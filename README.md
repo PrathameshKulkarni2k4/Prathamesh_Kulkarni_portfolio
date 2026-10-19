@@ -55,6 +55,8 @@ lib/
 
 Everything editable is in **`lib/data.ts`** — profile, proof points, projects, skills, timeline and nav. Change that one file and the whole site follows.
 
+The resume is committed at **`public/Prathamesh_Kulkarni_Resume.pdf`** and served from the site root at `/Prathamesh_Kulkarni_Resume.pdf`. Replace that one file to update the download link everywhere.
+
 ## Deploy
 
 The site builds to a fully static `out/` directory (`output: "export"` in `next.config.mjs`), so it can be hosted anywhere — Vercel, Netlify, GitHub Pages, S3.
