@@ -297,6 +297,7 @@ export const timeline: TimelineItem[] = [
 ];
 
 export const beyond = [
+  "Registered Design No. 467176-001 — Patent Office of India (2025)",
   "AWS Academy Cloud Foundations (2025)",
   "200+ problems solved on LeetCode",
   "Cisco Networking Essentials certified",
